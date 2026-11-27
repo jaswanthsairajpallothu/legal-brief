@@ -55,7 +55,7 @@ def generate_brief(data: Optional[bytes] = None, filename: str = "judgment.pdf",
         t0 = time.perf_counter()
 
     s = stage(STAGES[0])
-    doc, pages = parse_pdf(data, filename, cfg) if pasted_text is None else parse_text(pasted_text, cfg)
+    doc, pages = parse_pdf(data, filename, cfg) if pasted_text is None else parse_text(pasted_text, cfg, filename)
     done(s)
     s = stage(STAGES[1])
     units = build_units(doc.document_id, pages, cfg)
