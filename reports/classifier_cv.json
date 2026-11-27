@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "version": "tfidf-lr-jurix-interim-pos-C4",
+    "label_scheme": "coarse-jurix",
+    "use_position": true,
+    "gate": 0.45,
+    "C": 4.0,
+    "seed": 42,
+    "classes": [
+      "Arguments",
+      "Decision",
+      "Facts",
+      "Reasoning"
+    ],
+    "dataset": "JURIX-2019 Indian SC rhetorical roles, 50 docs / 9380 sentences (Law-AI/semantic-segmentation, MIT)",
+    "label_mapping": {
+      "Facts": "Facts",
+      "Ruling by Lower Court": "Facts",
+      "Argument": "Arguments",
+      "Ratio of the decision": "Reasoning",
+      "Precedent": "Reasoning",
+      "Statute": "Reasoning",
+      "Ruling by Present Court": "Decision"
+    },
+    "sklearn": "1.9.1",
+    "python": "3.12.3"
+  },
+  "note": "5-fold GroupKFold by document, pooled predictions. Config chosen on the same CV (mildly optimistic). Coarse JURIX labels, NOT LegalSeg; Issue and AoP/AoR are rule-based and unevaluated.",
+  "cv_best": "pos=True,C=4.0",
+  "cv_all": {
+    "pos=False,C=1.0": {
+      "macro_f1": 0.5663019807077552,
+      "fold_macro_f1_mean": 0.566990921765357,
+      "fold_macro_f1_std": 0.03021432789464104
+    },
+    "pos=False,C=4.0": {
+      "macro_f1": 0.572064298684236,
+      "fold_macro_f1_mean": 0.5731702285859527,
+      "fold_macro_f1_std": 0.029725487239247648
+    },
+    "pos=False,C=16.0": {
+      "macro_f1": 0.5616638339253397,
+      "fold_macro_f1_mean": 0.5625499927135396,
+      "fold_macro_f1_std": 0.027207450913418106
+    },
+    "pos=True,C=1.0": {
+      "macro_f1": 0.6118656434812288,
+      "fold_macro_f1_mean": 0.6133426905916718,
+      "fold_macro_f1_std": 0.030917106281878826
+    },
+    "pos=True,C=4.0": {
+      "macro_f1": 0.6201078049555393,
+      "fold_macro_f1_mean": 0.6220146192768539,
+      "fold_macro_f1_std": 0.036689648526476146
+    },
+    "pos=True,C=16.0": {
+      "macro_f1": 0.6127318129566626,
+      "fold_macro_f1_mean": 0.6144968334379016,
+      "fold_macro_f1_std": 0.038160307784030637
+    }
+  },
+  "validation": {
+    "n": 9380,
+    "accuracy_secondary": 0.7434968017057569,
+    "macro_f1": 0.6201078049555393,
+    "weighted_f1": 0.7412325011152383,
+    "per_class": {
+      "Facts": {
+        "precision": 0.6771956856702619,
+        "recall": 0.693491124260355,
+        "f1-score": 0.6852465406353537,
+        "support": 2535
+      },
+      "Arguments": {
+        "precision": 0.42780026990553305,
+        "recall": 0.37514792899408284,
+        "f1-score": 0.39974779319041615,
+        "support": 845
+      },
+      "Reasoning": {
+        "precision": 0.8190426997245179,
+        "recall": 0.8290345067967934,
+        "f1-score": 0.8240083145678156,
+        "support": 5738
+      },
+      "Decision": {
+        "precision": 0.6042553191489362,
+        "recall": 0.5419847328244275,
+        "f1-score": 0.5714285714285714,
+        "support": 262
+      }
+    },
+    "confusion_labels": [
+      "Facts",
+      "Arguments",
+      "Reasoning",
+      "Decision"
+    ],
+    "confusion_matrix": [
+      [
+        1758,
+        143,
+        628,
+        6
+      ],
+      [
+        212,
+        317,
+        315,
+        1
+      ],
+      [
+        616,
+        279,
+        4757,
+        86
+      ],
+      [
+        10,
+        2,
+        108,
+        142
+      ]
+    ]
+  },
+  "heuristic_baseline": {
+    "n": 9380,
+    "accuracy_secondary": 0.06119402985074627,
+    "macro_f1": 0.18112348494634245,
+    "weighted_f1": 0.10653126973038939,
+    "per_class": {
+      "Facts": {
+        "precision": 0.5138339920948617,
+        "recall": 0.10256410256410256,
+        "f1-score": 0.17099638276882603,
+        "support": 2535
+      },
+      "Arguments": {
+        "precision": 0.6111111111111112,
+        "recall": 0.10414201183431952,
+        "f1-score": 0.17795753286147623,
+        "support": 845
+      },
+      "Reasoning": {
+        "precision": 0.8431372549019608,
+        "recall": 0.02997560125479261,
+        "f1-score": 0.057892965331538204,
+        "support": 5738
+      },
+      "Decision": {
+        "precision": 0.6923076923076923,
+        "recall": 0.20610687022900764,
+        "f1-score": 0.3176470588235294,
+        "support": 262
+      }
+    },
+    "confusion_labels": [
+      "Facts",
+      "Arguments",
+      "Reasoning",
+      "Decision"
+    ],
+    "confusion_matrix": [
+      [
+        260,
+        20,
+        15,
+        9
+      ],
+      [
+        28,
+        88,
+        5,
+        1
+      ],
+      [
+        215,
+        36,
+        172,
+        14
+      ],
+      [
+        3,
+        0,
+        12,
+        54
+      ]
+    ]
+  }
+}

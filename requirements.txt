@@ -1,0 +1,15 @@
+# Core (pin exact versions after your first clean install: `pip freeze`)
+pymupdf>=1.24
+scikit-learn>=1.4
+joblib>=1.3
+numpy>=1.26
+pandas>=2.1
+reportlab>=4.0
+streamlit>=1.36
+# Evaluation
+rouge-score>=0.1.2
+pytest>=8.0
+# Transformer summarizer (optional until you select a model; app falls back to extractive)
+# torch>=2.2
+# transformers>=4.40
+# sentencepiece>=0.2   # needed by PEGASUS tokenizers

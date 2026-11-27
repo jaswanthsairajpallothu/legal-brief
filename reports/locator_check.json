@@ -1,0 +1,58 @@
+{
+  "evidence_items": 253,
+  "resolve_to_source_unit": 253,
+  "excerpt_found_on_cited_page": 253,
+  "documents": [
+    {
+      "doc": "Sample_1",
+      "pages": 4,
+      "evidence_items": 22
+    },
+    {
+      "doc": "Sample_10",
+      "pages": 5,
+      "evidence_items": 21
+    },
+    {
+      "doc": "Sample_2",
+      "pages": 11,
+      "evidence_items": 32
+    },
+    {
+      "doc": "Sample_3",
+      "pages": 14,
+      "evidence_items": 38
+    },
+    {
+      "doc": "Sample_4",
+      "pages": 3,
+      "evidence_items": 18
+    },
+    {
+      "doc": "Sample_5",
+      "pages": 8,
+      "evidence_items": 18
+    },
+    {
+      "doc": "Sample_6",
+      "pages": 16,
+      "evidence_items": 37
+    },
+    {
+      "doc": "Sample_7",
+      "pages": 5,
+      "evidence_items": 23
+    },
+    {
+      "doc": "Sample_8",
+      "pages": 6,
+      "evidence_items": 20
+    },
+    {
+      "doc": "Sample_9",
+      "pages": 6,
+      "evidence_items": 24
+    }
+  ],
+  "caveat": "PDFs were generated from the judgment text; verifies page/offset mapping, not arbitrary real-world PDF layouts."
+}
